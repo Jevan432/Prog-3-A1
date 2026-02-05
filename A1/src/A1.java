@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class A1 {
     
-    private String filepath = "res/test.txt";
+    private String filepath = "A1/res/test.txt";
 
     public void run() throws Exception {
         
