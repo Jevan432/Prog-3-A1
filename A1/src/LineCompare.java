@@ -1,5 +1,8 @@
 import java.util.Comparator;
 
+/**
+ * Comparator that sorts tables alphabetically
+ */
 public class LineCompare implements Comparator<Row>{
 
     public int compare(Row rowA, Row rowB){

@@ -6,12 +6,22 @@ public class Table {
     private ArrayList<Row> rows;
     private int size;
 
+    /**
+     * Simple constructor
+     * 
+     */
     public Table(){
 
         this.rows = new ArrayList<Row>();
         this.size = 0;
     }
 
+    /**
+     * Constructor that makes a deep copy of a table that only includes rows with the input string
+     * 
+     * @param line
+     * @return
+     */
     public Table select(String line){
 
         Table selectTable = new Table();
@@ -24,6 +34,11 @@ public class Table {
         return selectTable;
     }
 
+    /**
+     * Getters and setters
+     * 
+     * @return
+     */
     public int getSize(){
         return this.size;
     }
@@ -37,12 +52,23 @@ public class Table {
         this.rows = rows;
     }
 
+    /**
+     * Adds a row to the table
+     * 
+     * @param row
+     */
     public void add(Row row){
 
         this.rows.add(row);
         this.size += 1;
     }
 
+    /**
+     * Adds a new row to the table
+     * 
+     * @param data
+     * @param id
+     */
     public void addRow(String data, int id){
 
         Row row = new Row(data, id);
@@ -50,6 +76,12 @@ public class Table {
         this.size += 1; 
     }
 
+    /**
+     * Sorts the input table alphabetically
+     * 
+     * @param table
+     * @return
+     */
     public Table sort(Table table){
 
         ArrayList<Row> list = new ArrayList<Row>();
@@ -61,6 +93,10 @@ public class Table {
         return table;
     }
 
+    /**
+     * Prints prints a specified amount of rows from the table
+     * 
+     */
     public void printTable(int r){
         
         if (r == 0){

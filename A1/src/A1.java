@@ -7,10 +7,17 @@ public class A1 {
 
     public void run() throws Exception {
         
-        test(read(this.filepath));
+        test(fileReader(this.filepath));
     }
     
-    public Table read(String filePath) throws Exception {
+    /**
+     * Reads text from a file by line and creates a row from each line then inserts each row into a table
+     * 
+     * @param filePath
+     * @return
+     * @throws Exception
+     */
+    public Table fileReader(String filePath) throws Exception {
 
         File file = new File(filePath);
         Scanner fileScanner = new Scanner(file);
@@ -29,6 +36,11 @@ public class A1 {
         return table;
     }
 
+    /**
+     * This is a test function to verify the requirments of Assignment 1
+     * 
+     * @param table
+     */
     public void test(Table table){
 
         System.out.println("The total number of rows is: "  + table.getSize());

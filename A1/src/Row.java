@@ -3,12 +3,23 @@ public class Row implements Comparable<Row>{
     private String data;
     private int id;
 
+    /**
+     * Simple constructor
+     * 
+     * @param data
+     * @param id
+     */
     public Row (String data, int id){
 
         this.data = data;
         this.id = id;
     }
 
+    /**
+     * Getters and setters
+     * 
+     * @return
+     */
     public String getData(){
         return this.data;
     }
@@ -22,6 +33,10 @@ public class Row implements Comparable<Row>{
         this.id = id;
     }
 
+    /**
+     * Natural comparable that sorts rows by their id
+     * 
+     */
     public int compareTo(Row other){
 
         if (this.id == other.getId()){
@@ -33,6 +48,7 @@ public class Row implements Comparable<Row>{
         else
             return 1;
     }
+
 
     public boolean equals(Object other){
 
