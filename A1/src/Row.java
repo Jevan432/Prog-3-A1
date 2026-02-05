@@ -63,6 +63,10 @@ public class Row implements Comparable<Row>{
         return this.id == r.getId();
     }
 
+    /**
+     * overides toString to instead print the string in the row
+     * 
+     */
     public String toString(){
 
         return this.data;
