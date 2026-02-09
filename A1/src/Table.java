@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * Table object that holds Row objects 
+ * 
+ */
 public class Table {
     
     private ArrayList<Row> rows;
@@ -30,6 +34,8 @@ public class Table {
                 selectTable.add(row);
             }
         }
+
+        this.size = selectTable.getSize();
 
         return selectTable;
     }
@@ -110,6 +116,6 @@ public class Table {
             }
         }
         else
-            System.out.print("You can not enter a number that is negative or larger than table size");
+            System.out.print("You can not enter a number that is negative or larger than table size \n");
     }
 }

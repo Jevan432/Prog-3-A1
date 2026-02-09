@@ -1,3 +1,7 @@
+/**
+ * Row class that holds a string and has an id
+ * 
+ */
 public class Row implements Comparable<Row>{
     
     private String data;

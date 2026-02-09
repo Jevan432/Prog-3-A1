@@ -52,5 +52,6 @@ public class A1 {
         
         Table theTable = table.select("the");
         theTable.printTable(10);
+        System.out.println("The total number of rows is: "  + table.getSize());
     }
 }
